@@ -8,14 +8,14 @@ import { HttpService } from '../http.service';
 })
 export class ListComponent implements OnInit {
 
-  brews: Object;
+  items: Object;
 
   constructor(private _http: HttpService) { }
-
+ 
   ngOnInit() {
-    this._http.getBeer().subscribe(data=>{
-      this.brews = data;
-      console.log(this.brews);
+    this._http.getItems().subscribe( data => {
+      this.items = data;
+      console.log(this.items);
     });
   }
 
