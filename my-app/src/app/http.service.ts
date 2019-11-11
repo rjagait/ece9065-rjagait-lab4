@@ -9,6 +9,6 @@ export class HttpService {
   constructor(private http: HttpClient) { }
   
   getBeer(){
-    return this.http.get('http://localhost:4200/api')
+    return this.http.get('http://localhost:3000/api')
   }
 }

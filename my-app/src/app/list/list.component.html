@@ -3,7 +3,8 @@
 <ul *ngIf="brews">
     <li *ngFor="let brew of brews">
         <p class="name">{{ brew.name }}</p>
-        <p class="country">{{ brew.country }}</p>
-        <a class="site" href="{{ brew.website_url }}">site</a>
+        <p class="name">Type: {{ brew.type }}</p>
+        <p class="name">Quantity left: {{ brew.quantity }}</p>
+        <p class="country">Lend Duration: {{ brew.duration }}</p>
     </li>
 </ul>
