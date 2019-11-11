@@ -27,7 +27,5 @@ p.name {
 }
 
 p.country {
-    text-transform: uppercase;
     font-size: .9rem;
-    flex-grow: 1;
 }

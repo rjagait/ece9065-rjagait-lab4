@@ -1,10 +1,10 @@
-<h1>Breweries</h1>
+<h1>List of Items</h1>
 
 <ul *ngIf="brews">
     <li *ngFor="let brew of brews">
         <p class="name">{{ brew.name }}</p>
-        <p class="name">Type: {{ brew.type }}</p>
-        <p class="name">Quantity left: {{ brew.quantity }}</p>
+        <p class="country">Type: {{ brew.type }}</p>
+        <p class="country">Quantity left: {{ brew.quantity }}</p>
         <p class="country">Lend Duration: {{ brew.duration }}</p>
     </li>
 </ul>

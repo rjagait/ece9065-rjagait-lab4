@@ -10,6 +10,16 @@ mongoose.connect('mongodb://@localhost:27017/datalist', {
 });
 
 // serve files in static ' folder at root URL ' / '
+
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Headers', '*');
+    if (req.method === 'OPTIONS') {
+        res.header('Access-Control-Allow-Methods', 'PUT, POST, PATCH, DELETE, GET');
+        return res.status(200).json({});
+    }
+    next();
+});
 app.use('/', express.static(__dirname));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -139,6 +149,7 @@ app.route('/api/:itemID')
                 });
             });
     });
+
 
 app.listen(3000); // start server
 
